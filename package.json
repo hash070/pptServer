@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "bundle": "rimraf dist && rimraf ../ppt/dist && cd ../ppt/ && pnpm build&& cd ../static-server/ && pnpm build && pnpm ncc build dist/main.js -m -t -o dist/bundle/ &&ncp ../ppt/dist ../static-server/dist/bundle/client && ncp pkg.json dist/bundle/pkg.json && cd dist/bundle/ &&pkg index.js -c pkg.json",
+    "bundle": "rimraf dist && rimraf ../ppt/dist && cd ../ppt/ && pnpm build&& cd ../pptServer/ && pnpm build && pnpm ncc build dist/main.js -m -t -o dist/bundle/ &&ncp ../ppt/dist ../pptServer/dist/bundle/client && ncp pkg.json dist/bundle/pkg.json && cd dist/bundle/ &&pkg index.js -c pkg.json",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
